@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <title>Credit</title>
+    {% load static %}
+    <link href={% static 'myapp/main.css' %} rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+{% include 'myapp/head.html' %}
+{% block header %}
+{% endblock %}
+
+<div>
+  <h1>Enter the money you want to debit</h1>
+
+<form method="post" action="/mkdebit/">
+    <center>
+    <b>
+    {% csrf_token %}
+    {{ form.as_p }}</b>
+    <input type="submit" value="Confirm"><br><br><br>
+
+        </center>
+
+
+</div>
+
+{%include 'myapp/foot.html' %}
+{% block footer %}
+{% endblock %}
+</body>
+</html>

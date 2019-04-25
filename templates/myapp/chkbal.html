@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>Credit</title>
+    {% load static %}
+    <link href={% static 'myapp/main.css' %} rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+{% include 'myapp/head.html' %}
+{% block header %}
+{% endblock %}
+
+<div>
+  <h1>your balance is </h1>
+
+{{  Balance }}
+
+</div>
+
+{%include 'myapp/foot.html' %}
+{% block footer %}
+{% endblock %}
+</body>
+</html>

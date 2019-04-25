@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>Login</title>
+    {% load static %}
+    <link href={% static 'myapp/main.css' %} rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+{% include 'myapp/head.html' %}
+{% block header %}
+{% endblock %}
+
+<form method="post" action="/loginsuccess/">
+    <center>
+    <b>
+    {% csrf_token %}
+    {{ form.as_p }}</b>
+    <input type="submit" value="LOGIN"><br><br><br>
+    <a href="/signup/">SignUp</a>
+        </center>
+
+</form>
+
+{%include 'myapp/foot.html' %}
+{% block footer %}
+{% endblock %}
+</body>
+</html>

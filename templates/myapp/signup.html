@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>
+        Login
+        </title>
+    {% load static %}
+    <link href={% static 'myapp/main.css' %} rel="stylesheet" type="text/css" media="all" />
+
+</head>
+
+<body>
+{% include 'myapp/head.html' %}
+{% block header %}
+{% endblock %}
+<center>
+<h1 align="center">Welcome To Signup Page</h1>
+<br>
+<form method="post" action="/mksignup/">
+
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" value="SIGNUP?">
+    <a href="login/">LOGIN?</a>
+
+    {% if error %}
+    <h1>{{ error }}</h1>
+    {% endif %}
+</form>
+
+
+{% include 'myapp/foot.html' %}
+{% block footer %}
+{% endblock %}
+</center>
+</body>
+
+</html>

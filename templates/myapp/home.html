@@ -1,0 +1,28 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>PyBank</title>
+    {% load static %}
+    <link href={% static 'myapp/main.css' %} rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+{% include 'myapp/head.html' %}
+{% block header %}
+{% endblock %}
+
+
+<h1 align="center">Welcome To PyBank</h1>
+<br>
+<center>
+
+<table cellpadding="100">
+    <tr><a href="login/" ><h1>LOGIN</h1></a></tr>
+    <tr><a href="signup/"><h1>SIGNUP</h1></a></tr>
+</center>
+</table>
+<hr>
+{% include 'myapp/foot.html' %}
+{% block footer %}
+{% endblock %}
+</body>
+</html>

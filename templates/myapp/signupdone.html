@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <title>Login</title>
+    {% load static %}
+    <link href={% static 'myapp/main.css' %} rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+{% include 'myapp/head.html' %}
+{% block header %}
+{% endblock %}
+{{ data }}
+<div>
+  <h1>Welcome Back {{ name }}</h1>
+  <h1>Your Password {{ password }}</h1>
+</div>
+
+{%include 'myapp/foot.html' %}
+{% block footer %}
+{% endblock %}
+</body>
+</html>
